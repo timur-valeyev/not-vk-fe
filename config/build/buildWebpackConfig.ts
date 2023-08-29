@@ -21,6 +21,10 @@ const {mode, paths, isDev} = options
    },
    resolve: {
      extensions: ['.tsx', '.ts', '.js'],
+     preferAbsolute: true,
+     modules: [options.paths.src, 'node_modules'],
+     mainFiles: ['index'],
+     alias: {}
    },
    devtool: isDev ? 'inline-source-map' : undefined,
    devServer: isDev? buildWebpackDevServer(options): undefined

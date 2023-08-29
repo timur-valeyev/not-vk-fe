@@ -1,0 +1,15 @@
+@import "vars";
+
+.app {
+  min-height: 100vh;
+}
+
+.light {
+  background: $background-light;
+  color: $text-color-primary-light;
+}
+
+.dark {
+  background: $background-dark;
+  color: $text-color-primary-dark;
+}

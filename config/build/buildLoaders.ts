@@ -1,6 +1,7 @@
 import {RuleSetRule} from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import {BuildOptions} from './types/config'
+import svgrLoader from '@svgr/webpack'
 
 export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
   const tsLoaders = {
@@ -26,5 +27,11 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
     ]
   }
 
-  return [tsLoaders, cssLoaders]
+  const svgLoaders = {
+    test: /\.svg$/i,
+    issuer: /\.[jt]sx?$/,
+    use: ['@svgr/webpack'],
+  }
+
+  return [tsLoaders, cssLoaders, svgLoaders]
 }

@@ -1,0 +1,12 @@
+@mixin button-styles($btn-background, $text-color, $svg-fill, $hover-background) {
+  background: $btn-background;
+  color: $text-color;
+
+  svg {
+    fill: $svg-fill;
+  }
+
+  &:hover {
+    background: $hover-background;
+  }
+}

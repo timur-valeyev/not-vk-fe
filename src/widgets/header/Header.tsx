@@ -1,8 +1,8 @@
 import {FC} from 'react'
 import {Theme, useTheme} from 'app/providers/theme'
 import {SearchInput} from 'shared'
-import SiteLogo from '../../assets/icons/site-logo.svg'
-import UserLogo from '../../assets/icons/user-logo.png'
+import SiteLogo from '../../shared/assets/icons/site-logo.svg'
+import UserLogo from '../../shared/assets/icons/user-logo.png'
 import cn from 'classnames'
 import styles from './Header.module.scss'
 

@@ -1,5 +1,6 @@
 import {Theme, useTheme} from 'app/providers/theme'
-import {Button, Header} from 'shared'
+import {Button} from 'shared'
+import {Header} from 'widgets'
 import {ButtonVariant} from 'shared/ui/button/types'
 import cn from 'classnames'
 import styles from './styles/App.module.scss'

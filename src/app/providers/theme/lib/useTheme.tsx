@@ -6,7 +6,7 @@ interface UseThemeProps {
   toggleTheme: () => void
 }
 
-export const useTheme = () => {
+export const useTheme = (): UseThemeProps => {
   const {theme, setTheme} = useContext(ThemeContext)
 
   const toggleTheme = ()=>{

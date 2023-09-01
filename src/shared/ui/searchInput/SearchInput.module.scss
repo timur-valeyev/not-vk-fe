@@ -1,0 +1,43 @@
+@import "app/styles/vars";
+
+.searchInput {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    width: 14px;
+    height: 14px;
+    fill: $svg-fill;
+  }
+}
+
+.input {
+  height: 30px;
+  width: 230px;
+  padding: 10px 10px 10px 30px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.light {
+  background: $background-light;
+  color: $text-color-primary-light;
+
+  &:hover {
+    background: $hover-input-light;
+  }
+}
+
+.dark {
+  background: $background-input-dark;
+  color: $text-color-primary-dark;
+
+  &:hover {
+    background: $hover-input-dark;
+  }
+}
+
+

@@ -1,13 +1,16 @@
 import {Suspense} from 'react'
 import {Outlet, Route, Routes} from 'react-router-dom'
 import {HomePage, NotFoundPage} from 'pages'
-import {Header} from 'widgets'
+import {Header, SidebarLeft} from 'widgets'
 
 const Layout = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <div className='page-content'>
+        <SidebarLeft />
+        <Outlet />
+      </div>
     </>
   )
 }
@@ -17,7 +20,7 @@ export const AppRouter = () => {
     <Suspense fallback={<div>Загрузка...</div>}>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route path="/" element={<HomePage/>}/>
+          <Route path="/feed" element={<HomePage/>}/>
           <Route path="*" element={<NotFoundPage/>}/>
         </Route>
       </Routes>

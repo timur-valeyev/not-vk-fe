@@ -1,12 +1,14 @@
 import {FC} from 'react'
-import cn from 'classnames'
-import styles from './SidebarLeft.module.scss'
 import {MenuProps} from 'widgets/header/types'
 import {Link} from 'react-router-dom'
+
 import ProfileIcon from '../../../shared/assets/icons/profile-icon.svg'
 import NewsIcon from '../../../shared/assets/icons/news-icon.svg'
 import MessagesIcon from '../../../shared/assets/icons/messages-icon.svg'
 import FriendsIcon from '../../../shared/assets/icons/friends-icon.svg'
+
+import styles from './SidebarLeft.module.scss'
+import cn from 'classnames'
 
 const menu: MenuProps[] = [
   {icon: <ProfileIcon/>, path: '/profile', title: 'Моя страница'},

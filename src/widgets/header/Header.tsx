@@ -22,7 +22,9 @@ export const Header: FC = () => {
         <SearchInput placeholder='Поиск...' theme={theme}/>
       </div>
       <div>
-        <img src={UserLogo} alt="user-logo"/>
+        <Link to='/profile'>
+          <img src={UserLogo} alt="user-logo"/>
+        </Link>
         <button onClick={toggleTheme}>theme</button>
       </div>
     </header>

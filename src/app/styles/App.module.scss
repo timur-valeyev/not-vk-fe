@@ -7,9 +7,17 @@
 .light {
   background: $background-light;
   color: $text-color-primary-light;
+
+  a {
+    color: $text-color-primary-light;
+  }
 }
 
 .dark {
   background: $background-dark;
   color: $text-color-primary-dark;
+
+  a {
+    color: $text-color-primary-dark;
+  }
 }

@@ -1,15 +1,17 @@
-import {FC} from 'react'
-import {Theme, useTheme} from 'app/providers/theme'
-import {SearchInput} from 'shared'
+import { Theme, useTheme } from 'app/providers/theme'
+import cn from 'classnames'
+import { FC } from 'react'
+import { Link } from 'react-router-dom'
+import { SearchInput } from 'shared'
+
 import SiteLogo from '../../shared/assets/icons/site-logo.svg'
 import UserLogo from '../../shared/assets/icons/user-logo.png'
-import {Link} from 'react-router-dom'
-import cn from 'classnames'
+
 import styles from './Header.module.scss'
 
 
 export const Header: FC = () => {
-  const {theme} = useTheme()
+  const { theme } = useTheme()
 
   return (
     <header className={cn(styles.header, {
@@ -23,7 +25,7 @@ export const Header: FC = () => {
       </div>
       <div>
         <Link to='/profile'>
-          <img src={UserLogo} alt="user-logo"/>
+          <img src={UserLogo} alt='user-logo'/>
         </Link>
       </div>
     </header>

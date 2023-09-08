@@ -1,11 +1,12 @@
-import {Theme, useTheme} from 'app/providers/theme'
-import {AppRouter} from 'app/providers/router/AppRouter'
+import { AppRouter } from 'app/providers/router/AppRouter'
+import { Theme, useTheme } from 'app/providers/theme'
 import cn from 'classnames'
+
 import styles from './styles/App.module.scss'
 
 
 export const App = () => {
-  const {theme} = useTheme()
+  const { theme } = useTheme()
 
   return (
     <div className={cn(styles.app, {

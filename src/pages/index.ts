@@ -1,5 +1,5 @@
-import {lazy} from 'react'
+import { lazy } from 'react'
 
 
-export const NotFoundPage = lazy(() => import('./NotFound/NotFound'))
-export const HomePage = lazy(() => import('./Home/Home'))
+export const NotFoundPage = lazy(async () => await import('./NotFound/NotFound'))
+export const HomePage = lazy(async () => await import('./Home/Home'))

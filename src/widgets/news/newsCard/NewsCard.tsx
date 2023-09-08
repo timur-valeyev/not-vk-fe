@@ -1,9 +1,10 @@
-import {FC} from 'react'
-import {NewsProps} from 'widgets/news/news/types'
+import { FC } from 'react'
+import { NewsProps } from 'widgets/news/news/types'
+
 import styles from './NewsCard.module.scss'
 
 
-export const NewsCard: FC<NewsProps> = ({title, body}) => {
+export const NewsCard: FC<NewsProps> = ({ title, body }) => {
   return (
     <div className={styles.newsItem}>
       <p className={styles.title}>{title}</p>

@@ -1,7 +1,8 @@
-import {FC, useEffect, useState} from 'react'
 import axios from 'axios'
-import {NewsProps} from 'widgets/news/news/types'
-import {NewsCard} from 'widgets'
+import { FC, useEffect, useState } from 'react'
+import { NewsCard } from 'widgets'
+import { NewsProps } from 'widgets/news/news/types'
+
 import styles from './News.module.scss'
 
 
@@ -13,16 +14,14 @@ export const News: FC = () => {
     setNews(res.data)
   }
 
-  useEffect( () => {
+  useEffect(() => {
     getNews()
   }, [])
 
-  console.log(news)
-
   return (
     <div className={styles.newsBlock}>
-      {news && news.map(newsItem => (
-        <NewsCard key={newsItem.id} title={newsItem.title} body={newsItem.body} />
+      {news?.map(newsItem => (
+        <NewsCard key={newsItem.id} title={newsItem.title} body={newsItem.body}/>
       ))}
     </div>
   )

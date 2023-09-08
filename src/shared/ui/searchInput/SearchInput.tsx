@@ -1,13 +1,16 @@
-import {FC} from 'react'
-import {SearchInputProps} from 'shared/ui/searchInput/types'
-import {Theme} from 'app/providers/theme'
-import SearchLogo from '../../assets/icons/search.svg'
+import { Theme } from 'app/providers/theme'
 import cn from 'classnames'
+import { FC } from 'react'
+import { SearchInputProps } from 'shared/ui/searchInput/types'
+
+
+import SearchLogo from '../../assets/icons/search.svg'
+
 import styles from './SearchInput.module.scss'
 
 
 export const SearchInput: FC<SearchInputProps> = (props) => {
-  const {placeholder, className, theme = Theme.LIGHT, ...otherProps} = props
+  const { placeholder, className, theme = Theme.LIGHT, ...otherProps } = props
 
   return (
     <div className={styles.searchInput}>

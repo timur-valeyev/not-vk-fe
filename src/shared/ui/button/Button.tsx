@@ -1,7 +1,8 @@
-import {FC} from 'react'
-import {ButtonProps, ButtonVariant} from 'shared/ui/button/types'
-import {Theme} from 'app/providers/theme'
+import { Theme } from 'app/providers/theme'
 import cn from 'classnames'
+import { FC } from 'react'
+import { ButtonProps, ButtonVariant } from 'shared/ui/button/types'
+
 import styles from './Button.module.scss'
 
 
@@ -12,7 +13,8 @@ export const Button: FC<ButtonProps> = (props) => {
     variant = ButtonVariant.SECONDARY,
     theme = Theme.LIGHT,
     svg,
-    ...otherProps} = props
+    ...otherProps
+  } = props
 
   const buttonStyles = (btnVariant: ButtonVariant, btnTheme: Theme) => {
     return variant === btnVariant && theme === btnTheme
@@ -21,7 +23,7 @@ export const Button: FC<ButtonProps> = (props) => {
   return (
     <button
       {...otherProps}
-      className={cn(styles.button, {
+      className={cn(className, styles.button, {
         [styles.primaryLight]: buttonStyles(ButtonVariant.PRIMARY, Theme.LIGHT),
         [styles.secondaryLight]: buttonStyles(ButtonVariant.SECONDARY, Theme.LIGHT),
         [styles.primaryDark]: buttonStyles(ButtonVariant.PRIMARY, Theme.DARK),

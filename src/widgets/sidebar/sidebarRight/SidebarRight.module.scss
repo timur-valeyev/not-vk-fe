@@ -1,0 +1,27 @@
+@import "src/app/styles/vars";
+
+.sidebarRight {
+  min-width: 330px;
+}
+
+.sidebarRightItem {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: $background-content-light;
+}
+
+.menu {
+
+}
+
+.menuItem {
+  padding: 10px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+
+  &:hover {
+    background: $hover-input-light;
+    cursor: pointer;
+  }
+}

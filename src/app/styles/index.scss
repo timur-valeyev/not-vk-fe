@@ -16,6 +16,10 @@ li {
 
 .page-content {
   display: flex;
-  padding: 10px;
+  padding: 15px 10px;
   gap: 10px;
+}
+
+.main-content {
+  flex-grow: 1;
 }

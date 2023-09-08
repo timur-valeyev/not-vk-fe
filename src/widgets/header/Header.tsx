@@ -9,7 +9,7 @@ import styles from './Header.module.scss'
 
 
 export const Header: FC = () => {
-  const {theme, toggleTheme} = useTheme()
+  const {theme} = useTheme()
 
   return (
     <header className={cn(styles.header, {
@@ -25,7 +25,6 @@ export const Header: FC = () => {
         <Link to='/profile'>
           <img src={UserLogo} alt="user-logo"/>
         </Link>
-        <button onClick={toggleTheme}>theme</button>
       </div>
     </header>
   )

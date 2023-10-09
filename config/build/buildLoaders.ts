@@ -1,9 +1,10 @@
-import {RuleSetRule} from 'webpack'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
-import {BuildOptions} from './types/config'
+import { RuleSetRule } from 'webpack'
+
+import { BuildOptions } from './types/config'
 
 
-export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
+export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
   const tsLoaders = {
     test: /\.tsx?$/,
     use: 'ts-loader',
@@ -11,7 +12,7 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
   }
 
   const cssLoaders = {
-    test: /\.s[ac]ss$/i,
+    test: /\.(scss|css)$/,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
@@ -30,15 +31,15 @@ export function buildLoaders({isDev}: BuildOptions): RuleSetRule[] {
   const svgLoaders = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
-    use: ['@svgr/webpack'],
+    use: ['@svgr/webpack']
   }
 
   const fileLoaders = {
     test: /\.(png|jpe?g|gif)$/i,
     use: [
       {
-        loader: 'file-loader',
-      },
+        loader: 'file-loader'
+      }
     ]
   }
 

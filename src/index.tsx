@@ -2,6 +2,7 @@ import { App } from 'app/App'
 import { ErrorBoundary } from 'app/providers/errorBoundary/ErrorBoundary'
 import { ThemeProvider } from 'app/providers/theme/ui/ThemeProvider'
 import { createRoot } from 'react-dom/client'
+import { SkeletonTheme } from 'react-loading-skeleton'
 import { BrowserRouter } from 'react-router-dom'
 import './app/styles/index.scss'
 
@@ -10,10 +11,12 @@ const root = createRoot(rootElement)
 
 root.render(
   <ThemeProvider>
-    <ErrorBoundary>
-      <BrowserRouter>
-        <App/>
-      </BrowserRouter>
-    </ErrorBoundary>
+    <SkeletonTheme baseColor='#c5c4c4' highlightColor='#e8dede'>
+      <ErrorBoundary>
+        <BrowserRouter>
+          <App/>
+        </BrowserRouter>
+      </ErrorBoundary>
+    </SkeletonTheme>
   </ThemeProvider>
 )

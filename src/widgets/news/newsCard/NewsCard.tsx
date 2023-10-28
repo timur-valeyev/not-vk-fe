@@ -1,6 +1,5 @@
 import { FC } from 'react'
-import { NewsProps } from 'widgets/news/news/types'
-
+import {NewsProps} from '../news/types'
 import styles from './NewsCard.module.scss'
 
 

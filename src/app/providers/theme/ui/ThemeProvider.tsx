@@ -1,5 +1,5 @@
-import { Theme, THEME_KEY, ThemeContext } from 'app/providers/theme/lib/ThemeContext'
 import React, { FC, ReactNode, useMemo, useState } from 'react'
+import {Theme, THEME_KEY, ThemeContext} from '../lib/ThemeContext'
 
 interface ThemeProviderProps {
   children: ReactNode

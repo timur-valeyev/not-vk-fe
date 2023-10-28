@@ -1,6 +1,6 @@
-import { Button } from 'shared'
+import {Button} from './Button'
 
-describe(Button, () => {
+describe('Button', () => {
   test('testBtn', () => {
     expect('Button').toBe('Button')
   })

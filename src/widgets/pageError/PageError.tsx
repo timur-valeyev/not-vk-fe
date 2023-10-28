@@ -1,12 +1,13 @@
-import { Button } from 'shared'
-import { ButtonVariant } from 'shared/ui/button/types'
 
+
+import {Button} from '../../shared'
+import {ButtonVariant} from '../../shared/ui/button/types'
 import styles from './PageError.module.scss'
 
 
 export const PageError = () => {
   const reloadPage = () => {
-    location.reload()
+    window.location.reload()
   }
 
   return (

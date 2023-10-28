@@ -1,5 +1,5 @@
-import { Theme } from 'app/providers/theme'
 import { DetailedHTMLProps, HTMLAttributes, ReactElement, ReactNode } from 'react'
+import {Theme} from '../../../app/providers/theme'
 
 export enum ButtonVariant {
   PRIMARY = 'primary',

@@ -1,5 +1,4 @@
-import { Loader } from 'shared'
-
+import {Loader} from '../../shared'
 import styles from './PageLoader.module.scss'
 
 export const PageLoader = () => {

@@ -1,9 +1,9 @@
-@import "app/styles/vars";
+@import '../../../../src/app/styles/vars';
 
 .searchInput {
   position: relative;
 
-  svg {
+  img {
     position: absolute;
     top: 7px;
     left: 10px;

@@ -1,4 +1,4 @@
-import { News } from 'widgets'
+import {News} from '../../widgets'
 
 const Home = () => {
   return <News/>

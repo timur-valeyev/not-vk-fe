@@ -1,8 +1,7 @@
-import { Theme } from 'app/providers/theme'
 import cn from 'classnames'
 import { FC } from 'react'
-import { ButtonProps, ButtonVariant } from 'shared/ui/button/types'
-
+import {ButtonProps, ButtonVariant} from './types'
+import {Theme} from '../../../app/providers/theme'
 import styles from './Button.module.scss'
 
 

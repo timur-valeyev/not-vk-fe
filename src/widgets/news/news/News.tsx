@@ -1,10 +1,9 @@
 import axios from 'axios'
 import { FC, useEffect, useState } from 'react'
-import { NewsCard } from 'widgets'
-import { NewsProps } from 'widgets/news/news/types'
-import { SkeletonNewsCard } from 'widgets/skeletons/SkeletonNewsCard/SkeletonNewsCard'
 import 'react-loading-skeleton/dist/skeleton.css'
-
+import {NewsProps} from './types'
+import {SkeletonNewsCard} from '../../skeletons'
+import {NewsCard} from '../newsCard/NewsCard'
 import styles from './News.module.scss'
 
 
@@ -14,7 +13,7 @@ export const News: FC = () => {
 
   const getNews = async () => {
     try {
-      const res = await axios.get<NewsProps[]>(`https://jsonplaceholder.typicode.com/possts?_limit=10`)
+      const res = await axios.get<NewsProps[]>(`https://jsonplaceholder.typicode.com/posts?_limit=10`)
       setNews(res.data)
       setLoading(prevState => !prevState)
     } catch (e) {

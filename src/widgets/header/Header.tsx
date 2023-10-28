@@ -1,12 +1,10 @@
-import { Theme, useTheme } from 'app/providers/theme'
 import cn from 'classnames'
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import { SearchInput } from 'shared'
-
 import SiteLogo from '../../shared/assets/icons/site-logo.svg'
 import UserLogo from '../../shared/assets/icons/user-logo.png'
-
+import {Theme, useTheme} from '../../app/providers/theme'
+import {SearchInput} from '../../shared'
 import styles from './Header.module.scss'
 
 
@@ -19,7 +17,7 @@ export const Header: FC = () => {
     })}>
       <div className={styles.logo}>
         <Link to='/'>
-          <SiteLogo />
+          <img src={SiteLogo} alt="site logo"/>
         </Link>
         <SearchInput placeholder='Поиск...' theme={theme}/>
       </div>

@@ -1,10 +1,8 @@
-import { AppRouter } from 'app/providers/router/AppRouter'
-import { Theme, useTheme } from 'app/providers/theme'
 import cn from 'classnames'
 import { useEffect } from 'react'
-
+import {Theme, useTheme} from './providers/theme'
+import {AppRouter} from './providers/router/AppRouter'
 import styles from './styles/App.module.scss'
-
 
 export const App = () => {
   const { theme } = useTheme()

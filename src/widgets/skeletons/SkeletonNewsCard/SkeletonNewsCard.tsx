@@ -1,5 +1,4 @@
 import Skeleton from 'react-loading-skeleton'
-
 import styles from './SkeletonNewsCard.module.scss'
 
 

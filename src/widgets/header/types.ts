@@ -1,7 +1,7 @@
 import { ReactElement } from 'react'
 
 export interface MenuProps {
-  icon: string
+  icon: ReactElement
   path: string
   title: string
 }

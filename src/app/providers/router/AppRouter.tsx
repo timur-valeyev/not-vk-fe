@@ -1,8 +1,8 @@
+import { Layout } from 'app/providers/router/Layout'
+import { HomePage, NotFoundPage } from 'pages'
 import { Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import {Layout} from './Layout'
-import {PageLoader} from '../../../widgets'
-import {HomePage, NotFoundPage} from '../../../pages'
+import { PageLoader } from 'widgets'
 
 export const AppRouter = () => {
   return (

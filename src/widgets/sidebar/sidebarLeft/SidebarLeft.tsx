@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { MenuProps } from 'widgets/header/types'
 
@@ -21,18 +21,28 @@ const menu: MenuProps[] = [
 
 export const SidebarLeft: FC = () => {
   const { toggleTheme } = useTheme()
+  const [collapsed, setCollapsed] = useState(false)
+
+  const handleCollapseSidebar = () => {
+    setCollapsed((prev) => !prev)
+  }
 
   return (
-    <div className={cn(styles.sidebarLeft, 'container')}>
+    <div
+      className={cn(styles.sidebarLeft, 'container', {
+        [styles.collapsed]: collapsed
+      })}
+    >
       <ul className={cn(styles.list)}>
         {menu.map((menuItem) => (
           <li key={menuItem.path} className={cn(styles.item)}>
             {menuItem.icon}
-            <Link to={menuItem.path}>{menuItem.title}</Link>
+            {!collapsed && <Link to={menuItem.path}>{menuItem.title}</Link>}
           </li>
         ))}
       </ul>
-      <Button onClick={toggleTheme}>Change theme</Button>
+      <Button onClick={toggleTheme}>T</Button>
+      <Button onClick={handleCollapseSidebar}>C</Button>
     </div>
   )
 }

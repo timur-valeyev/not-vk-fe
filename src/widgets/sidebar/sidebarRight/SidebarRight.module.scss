@@ -5,6 +5,7 @@
 }
 
 .sidebarRightItem {
+  height: calc(100vh - var(--header-height));
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;

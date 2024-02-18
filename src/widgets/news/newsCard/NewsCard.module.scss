@@ -1,19 +1,13 @@
-@import '../../../app/styles/vars';
-
 .newsItem {
   padding: 10px;
   border-radius: 10px;
-  background: $background-content-light;
+  background: var(--background-content);
   margin-bottom: 10px;
 }
 
 .title {
-  color: $text-color-primary-light;
+  color: var(--text-color-primary);
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-.body {
-
 }

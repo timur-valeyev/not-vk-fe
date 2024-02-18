@@ -8,7 +8,7 @@
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
-  background: $background-content-light;
+  background: var(--background-content);
 }
 
 .menu {
@@ -21,7 +21,7 @@
   border-radius: 10px;
 
   &:hover {
-    background: $hover-input-light;
+    background: var(--hover-input);
     cursor: pointer;
   }
 }

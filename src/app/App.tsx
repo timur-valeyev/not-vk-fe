@@ -1,10 +1,7 @@
 import { AppRouter } from 'app/providers/router/AppRouter'
-import { Theme, useTheme } from 'app/providers/theme'
+import { useTheme } from 'app/providers/theme'
+import './styles/App.scss'
 import cn from 'classnames'
-import { useEffect } from 'react'
-
-import styles from './styles/App.module.scss'
-
 
 export const App = () => {
   const { theme } = useTheme()
@@ -17,11 +14,8 @@ export const App = () => {
   // }, [])
 
   return (
-    <div className={cn(styles.app, {
-      [styles.light]: theme === Theme.LIGHT,
-      [styles.dark]: theme === Theme.DARK
-    })}>
-      <AppRouter/>
+    <div className={cn('app', theme)}>
+      <AppRouter />
     </div>
   )
 }

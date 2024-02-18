@@ -23,19 +23,3 @@
     height: 15px;
   }
 }
-
-.primaryLight {
-  @include button-styles($primary-btn-background-light, $primary-btn-text-color-light, $primary-btn-text-color-light, $hover-primary-btn-light);
-}
-
-.secondaryLight {
-  @include button-styles($secondary-btn-background-light, $secondary-btn-text-color-light, $secondary-btn-text-color-light, $hover-secondary-btn-light);
-}
-
-.primaryDark {
-  @include button-styles($primary-btn-background-dark, $primary-btn-text-color-dark, $primary-btn-text-color-dark, $hover-primary-btn-dark);
-}
-
-.secondaryDark {
-  @include button-styles($secondary-btn-background-dark, $secondary-btn-text-color-dark, $secondary-btn-text-color-dark, $hover-secondary-btn-dark)
-}

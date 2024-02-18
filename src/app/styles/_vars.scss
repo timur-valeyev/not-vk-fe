@@ -1,43 +1,10 @@
-//light theme
-$background-light: #EDEEF0;
-//text
-$text-color-primary-light: #000;
-$text-color-secondary-light: #8A95A1;
-//btn-primary
-$primary-btn-background-light: #D5E0EA;
-$primary-btn-text-color-light: #437BBA;
-//btn-secondary
-$secondary-btn-background-light: #A3A7AB;
-$secondary-btn-text-color-light: #FFFFFF;
-//hover
-$hover-primary-btn-light: #cbd9e3;
-$hover-secondary-btn-light: #9a9ea2;
-//content
-$background-content-light: #FFFFFF;
-$hover-input-light: #e5e6e8;
-$svg-fill: #79838E;
+:root {
+  --btn-primary: #07F;
+  --btn-secondary: #D5E0EA;
+  --btn-secondary-signup: #4BB34B;
+  --svg-fill: #79838E;
+}
 
 
-//dark theme
-$background-dark: #141414;
-//text
-$text-color-primary-dark: #E0E3E6;
-$text-color-secondary-dark: #939393;
-//btn-primary
-$primary-btn-background-dark: #3D3D3D;
-$primary-btn-text-color-dark: #E0E3E6;
-//btn-secondary
-$secondary-btn-background-dark: #232729;
-$secondary-btn-text-color-dark: #E9E9EA;
-//hover
-$hover-primary-btn-dark: #383838;
-$hover-secondary-btn-dark: #1c2021;
-//content
-$background-content-dark: #222222;
-$background-input-dark: #424242;
-$hover-input-dark: #4d4c4c;
 
 
-$btn-primary-light: #07F;
-$btn-secondary-light: #D5E0EA;
-$btn-secondary-signup: #4BB34B;

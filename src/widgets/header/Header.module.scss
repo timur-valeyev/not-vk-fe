@@ -1,5 +1,3 @@
-@import '../../app/styles/vars';
-
 .header {
   width: 100%;
   height: 50px;
@@ -7,15 +5,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background: $background-content-light;
+  background: var(--background-content);
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-.dark {
-  background: $background-content-dark;
 }

@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { FC, useState } from 'react'
+import { FC, useState, useTransition } from 'react'
 import { Link } from 'react-router-dom'
 import { MenuProps } from 'widgets/header/types'
 
@@ -11,16 +11,19 @@ import ProfileIcon from '../../../shared/assets/icons/profile-icon.svg'
 import styles from './SidebarLeft.module.scss'
 import { Button } from 'shared'
 import { useTheme } from 'app/providers/theme'
+import { useTranslation } from 'react-i18next'
+import { LangSwitcher, ThemeSwitcher } from 'widgets'
 
 const menu: MenuProps[] = [
-  { icon: <ProfileIcon />, path: '/profile', title: 'Моя страница' },
-  { icon: <NewsIcon />, path: '/feed', title: 'Новости' },
-  { icon: <MessagesIcon />, path: '/im', title: 'Мессенджер' },
-  { icon: <FriendsIcon />, path: '/friends', title: 'Друзья' }
+  { icon: <ProfileIcon />, path: '/profile', title: 'profile' },
+  { icon: <NewsIcon />, path: '/feed', title: 'news' },
+  { icon: <MessagesIcon />, path: '/im', title: 'messenger' },
+  { icon: <FriendsIcon />, path: '/friends', title: 'friends' }
 ]
 
 export const SidebarLeft: FC = () => {
   const { toggleTheme } = useTheme()
+  const { t } = useTranslation('sidebarLeft')
   const [collapsed, setCollapsed] = useState(false)
 
   const handleCollapseSidebar = () => {
@@ -37,12 +40,13 @@ export const SidebarLeft: FC = () => {
         {menu.map((menuItem) => (
           <li key={menuItem.path} className={cn(styles.item)}>
             {menuItem.icon}
-            {!collapsed && <Link to={menuItem.path}>{menuItem.title}</Link>}
+            {!collapsed && <Link to={menuItem.path}>{t(menuItem.title)}</Link>}
           </li>
         ))}
       </ul>
-      <Button onClick={toggleTheme}>T</Button>
       <Button onClick={handleCollapseSidebar}>C</Button>
+      <LangSwitcher />
+      <ThemeSwitcher />
     </div>
   )
 }

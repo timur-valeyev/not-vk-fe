@@ -1,7 +1,8 @@
+import cn from 'classnames'
 import { AppRouter } from 'app/providers/router/AppRouter'
 import { useTheme } from 'app/providers/theme'
 import './styles/App.scss'
-import cn from 'classnames'
+import { Suspense } from 'react'
 
 export const App = () => {
   const { theme } = useTheme()
@@ -15,7 +16,9 @@ export const App = () => {
 
   return (
     <div className={cn('app', theme)}>
-      <AppRouter />
+      <Suspense fallback=''>
+        <AppRouter />
+      </Suspense>
     </div>
   )
 }

@@ -1,4 +1,23 @@
 :root {
+  //light theme
+  --background-color: #EDEEF0;
+  //text
+  --text-color-primary: #000;
+  --text-color-secondary: #8A95A1;
+  //btn-primary
+  --primary-btn-background: #D5E0EA;
+  --primary-btn-text-color: #437BBA;
+  //btn-secondary
+  --secondary-btn-background: #A3A7AB;
+  --secondary-btn-text-color: #FFFFFF;
+  //hover
+  --hover-primary-btn: #cbd9e3;
+  --hover-secondary-btn: #9a9ea2;
+  //content
+  --background-content: #FFFFFF;
+  --hover-input: #e5e6e8;
+
+
   --btn-primary: #07F;
   --btn-secondary: #D5E0EA;
   --btn-secondary-signup: #4BB34B;
@@ -8,6 +27,9 @@
   --header-height: 50px;
   --sidebar-width: 160px;
   --sidebar-collapsed: 50px;
+
+  //z-index
+  --modal-index: 5;
 }
 
 

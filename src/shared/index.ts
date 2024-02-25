@@ -1,3 +1,5 @@
 export * from './ui/button/Button'
 export * from './ui/searchInput/SearchInput'
 export * from './ui/loader/Loader'
+export * from './ui/modal/Modal'
+export * from './ui/portal/Portal'

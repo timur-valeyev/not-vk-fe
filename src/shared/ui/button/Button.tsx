@@ -1,19 +1,12 @@
+import { Theme } from 'app/providers/theme'
 import cn from 'classnames'
 import { FC } from 'react'
-import {ButtonProps, ButtonVariant} from './types'
-import {Theme} from '../../../app/providers/theme'
-import styles from './Button.module.scss'
 
+import styles from './Button.module.scss'
+import { ButtonProps, ButtonVariant } from './types'
 
 export const Button: FC<ButtonProps> = (props) => {
-  const {
-    children,
-    className,
-    variant = ButtonVariant.SECONDARY,
-    theme = Theme.LIGHT,
-    svg,
-    ...otherProps
-  } = props
+  const { children, className, variant = ButtonVariant.SECONDARY, theme = Theme.LIGHT, svg, ...otherProps } = props
 
   const buttonStyles = (btnVariant: ButtonVariant, btnTheme: Theme) => {
     return variant === btnVariant && theme === btnTheme

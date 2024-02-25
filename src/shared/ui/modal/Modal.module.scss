@@ -1,0 +1,43 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  //z-index: var(--modal-index);
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0, 60%);
+}
+
+.content {
+  background: var(--background-color);
+  width: 50vw;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s transform;
+  transform: scale(.5);
+}
+
+.opened {
+  z-index: var(--modal-index);
+  pointer-events: auto;
+  opacity: 1;
+
+  .content {
+    transform: scale(1);
+  }
+}
+
+.isClosing {
+  .content {
+    transform: scale(.2);
+  }
+}

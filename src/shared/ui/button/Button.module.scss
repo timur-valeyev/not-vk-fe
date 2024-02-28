@@ -1,6 +1,3 @@
-@import '../../../../src/app/styles/vars';
-@import '../../../../src/app/styles/mixins';
-
 .button {
   width: 100%;
   height: 32px;
@@ -21,5 +18,23 @@
   svg {
     width: 15px;
     height: 15px;
+  }
+}
+
+.primary {
+  background: var(--primary-btn-background);
+  color: var(--primary-btn-text-color);
+
+  &:hover {
+    background: var(--hover-primary-btn);
+  }
+}
+
+.secondary {
+  background: var(--secondary-btn-background);
+  color: var(--secondary-btn-text-color);
+
+  &:hover {
+    background: var(--hover-secondary-btn);
   }
 }

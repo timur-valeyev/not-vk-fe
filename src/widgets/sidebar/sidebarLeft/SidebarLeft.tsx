@@ -1,6 +1,10 @@
 import cn from 'classnames'
-import { FC, useState, useTransition } from 'react'
+import { FC, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { Button } from 'shared'
+import { ButtonVariant } from 'shared/ui/button/types'
+import { LangSwitcher, ThemeSwitcher } from 'widgets'
 import { MenuProps } from 'widgets/header/types'
 
 import FriendsIcon from '../../../shared/assets/icons/friends-icon.svg'
@@ -9,10 +13,6 @@ import NewsIcon from '../../../shared/assets/icons/news-icon.svg'
 import ProfileIcon from '../../../shared/assets/icons/profile-icon.svg'
 
 import styles from './SidebarLeft.module.scss'
-import { Button } from 'shared'
-import { useTheme } from 'app/providers/theme'
-import { useTranslation } from 'react-i18next'
-import { LangSwitcher, ThemeSwitcher } from 'widgets'
 
 const menu: MenuProps[] = [
   { icon: <ProfileIcon />, path: '/profile', title: 'profile' },
@@ -22,7 +22,6 @@ const menu: MenuProps[] = [
 ]
 
 export const SidebarLeft: FC = () => {
-  const { toggleTheme } = useTheme()
   const { t } = useTranslation('sidebarLeft')
   const [collapsed, setCollapsed] = useState(false)
 
@@ -44,7 +43,12 @@ export const SidebarLeft: FC = () => {
           </li>
         ))}
       </ul>
-      <Button onClick={handleCollapseSidebar}>C</Button>
+      <Button variant={ButtonVariant.PRIMARY} onClick={handleCollapseSidebar}>
+        C
+      </Button>
+      <Button variant={ButtonVariant.SECONDARY} onClick={handleCollapseSidebar}>
+        C
+      </Button>
       <LangSwitcher />
       <ThemeSwitcher />
     </div>

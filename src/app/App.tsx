@@ -1,6 +1,6 @@
-import cn from 'classnames'
 import { AppRouter } from 'app/providers/router/AppRouter'
 import { useTheme } from 'app/providers/theme'
+import cn from 'classnames'
 import './styles/App.scss'
 import { Suspense } from 'react'
 

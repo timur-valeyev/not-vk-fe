@@ -1,5 +1,7 @@
 import { FC } from 'react'
-import {NewsProps} from '../news/types'
+
+import { NewsProps } from '../news/types'
+
 import styles from './NewsCard.module.scss'
 
 

@@ -1,5 +1,5 @@
-import { Button } from 'shared'
 import { useTheme } from 'app/providers/theme'
+import { Button } from 'shared'
 
 export const ThemeSwitcher = () => {
   const { toggleTheme } = useTheme()

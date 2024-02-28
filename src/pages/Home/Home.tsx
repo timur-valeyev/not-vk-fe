@@ -1,7 +1,7 @@
-import {News} from '../../widgets'
+import { News } from 'widgets'
 
 const Home = () => {
-  return <News/>
+  return <News />
 }
 
 export default Home

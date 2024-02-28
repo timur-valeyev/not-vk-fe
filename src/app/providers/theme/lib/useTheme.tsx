@@ -1,5 +1,6 @@
 import { useContext } from 'react'
-import {Theme, THEME_KEY, ThemeContext} from './ThemeContext'
+
+import { Theme, THEME_KEY, ThemeContext } from './ThemeContext'
 
 interface UseThemeProps {
   theme: Theme

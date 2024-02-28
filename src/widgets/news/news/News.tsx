@@ -1,11 +1,12 @@
 import axios from 'axios'
 import { FC, useEffect, useState } from 'react'
 import 'react-loading-skeleton/dist/skeleton.css'
-import {NewsProps} from './types'
-import {SkeletonNewsCard} from '../../skeletons'
-import {NewsCard} from '../newsCard/NewsCard'
-import styles from './News.module.scss'
+import { NewsCard } from 'widgets'
 
+import { SkeletonNewsCard } from '../../skeletons'
+
+import styles from './News.module.scss'
+import { NewsProps } from './types'
 
 export const News: FC = () => {
   const [news, setNews] = useState<NewsProps[]>()
@@ -15,7 +16,7 @@ export const News: FC = () => {
     try {
       const res = await axios.get<NewsProps[]>(`https://jsonplaceholder.typicode.com/posts?_limit=10`)
       setNews(res.data)
-      setLoading(prevState => !prevState)
+      setLoading((prevState) => !prevState)
     } catch (e) {
       console.log(e)
     }
@@ -27,10 +28,11 @@ export const News: FC = () => {
 
   return (
     <div className={styles.newsBlock}>
-      {loading && Array(10).fill(0).map((_, index) => <SkeletonNewsCard key={index}/>)}
-      {news?.map(newsItem => (
-        <NewsCard key={newsItem.id} title={newsItem.title} body={newsItem.body}/>
-      ))}
+      {loading &&
+        Array(10)
+          .fill(0)
+          .map((_, index) => <SkeletonNewsCard key={index} />)}
+      {news?.map((newsItem) => <NewsCard key={newsItem.id} title={newsItem.title} body={newsItem.body} />)}
     </div>
   )
 }

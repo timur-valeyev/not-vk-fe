@@ -1,16 +1,16 @@
 import { Outlet } from 'react-router-dom'
-import {Header, SidebarLeft, SidebarRight} from '../../../widgets'
+import { Header, SidebarLeft, SidebarRight } from 'widgets'
 
 export const Layout = () => {
   return (
     <>
-      <Header/>
+      <Header />
       <div className='page-content'>
-        <SidebarLeft/>
+        <SidebarLeft />
         <div className='main-content'>
-          <Outlet/>
+          <Outlet />
         </div>
-        <SidebarRight/>
+        <SidebarRight />
       </div>
     </>
   )

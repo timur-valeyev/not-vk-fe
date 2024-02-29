@@ -1,8 +1,8 @@
 import { AppRouter } from 'app/providers/router/AppRouter'
 import { useTheme } from 'app/providers/theme'
 import cn from 'classnames'
-import './styles/index.scss'
 import { Suspense } from 'react'
+import './styles/index.scss'
 
 export const App = () => {
   const { theme } = useTheme()

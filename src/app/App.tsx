@@ -1,7 +1,7 @@
 import { AppRouter } from 'app/providers/router/AppRouter'
 import { useTheme } from 'app/providers/theme'
 import cn from 'classnames'
-import './styles/App.scss'
+import './styles/index.scss'
 import { Suspense } from 'react'
 
 export const App = () => {

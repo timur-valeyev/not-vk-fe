@@ -1,3 +1,4 @@
+@import 'dark';
 @import 'vars';
 
 * {
@@ -23,3 +24,14 @@ li {
 .main-content {
   flex-grow: 1;
 }
+
+.app {
+  min-height: 100vh;
+  background: var(--background-color);
+  color: var(--text-color-primary);
+
+  a {
+    color: var(--text-color-primary);
+  }
+}
+

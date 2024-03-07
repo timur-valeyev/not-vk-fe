@@ -17,13 +17,19 @@ const meta = {
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Primary: Story = {
+export const PrimaryLight: Story = {
   args: {
     children: 'primary',
     variant: ButtonVariant.PRIMARY
   }
 }
-Primary.decorators = [ThemeDecorator(Theme.LIGHT)]
+export const PrimaryDark: Story = {
+  args: {
+    children: 'primary',
+    variant: ButtonVariant.PRIMARY
+  }
+}
+PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const Secondary: Story = {
   args: {
@@ -31,4 +37,10 @@ export const Secondary: Story = {
     variant: ButtonVariant.SECONDARY
   }
 }
-Secondary.decorators = [ThemeDecorator(Theme.LIGHT)]
+export const SecondaryDark: Story = {
+  args: {
+    children: 'secondary',
+    variant: ButtonVariant.SECONDARY
+  }
+}
+SecondaryDark.decorators = [ThemeDecorator(Theme.DARK)]

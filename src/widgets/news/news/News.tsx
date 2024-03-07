@@ -18,6 +18,7 @@ export const News: FC = () => {
       setNews(res.data)
       setLoading((prevState) => !prevState)
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.log(e)
     }
   }

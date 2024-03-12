@@ -9,15 +9,16 @@ interface UseThemeProps {
 
 export const useTheme = (): UseThemeProps => {
   const { theme, setTheme } = useContext(ThemeContext)
+  const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
 
   const toggleTheme = () => {
-    const newTheme = theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT
-
     if (setTheme) {
       setTheme(newTheme)
     }
     localStorage.setItem(THEME_KEY, newTheme)
   }
+
+  document.body.className = newTheme
 
   return { theme: theme!, toggleTheme }
 }

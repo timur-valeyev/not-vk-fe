@@ -15,6 +15,10 @@ li {
   list-style-type: none;
 }
 
+body {
+  color: var(--text-color-primary);
+}
+
 .page-content {
   display: flex;
   padding: 15px 10px;
@@ -28,7 +32,6 @@ li {
 .app {
   min-height: 100vh;
   background: var(--background-color);
-  color: var(--text-color-primary);
 
   a {
     color: var(--text-color-primary);

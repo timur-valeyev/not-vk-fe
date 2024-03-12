@@ -2,15 +2,15 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ fix-ci ]
   pull_request:
-    branches: [ main ]
+    branches: [ fix-ci ]
 
 jobs:
   pipeline:
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [macos-latest]
         node: [18]
     runs-on: ${{ matrix.os }}
     steps:
@@ -19,9 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-
-      - name: Remove conflicting containerd package
-        run: sudo apt-get remove containerd
 
       - name: Install Docker
         run: |

@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ fix-ci ]
+    branches: [ main ]
   pull_request:
-    branches: [ fix-ci ]
+    branches: [ main ]
 
 jobs:
   pipeline:

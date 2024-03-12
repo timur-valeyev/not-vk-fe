@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Remove conflicting containerd package
+        run: sudo apt-get remove containerd
+
       - name: Install Docker
         run: |
           sudo apt-get update

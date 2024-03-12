@@ -8,11 +8,10 @@ on:
 
 jobs:
   pipeline:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [macos-latest]
-        node: [18]
-    runs-on: ${{ matrix.os }}
+        node: [18.x]
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js environment

@@ -20,11 +20,6 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install Docker
-        run: |
-          brew install --cask docker
-          open /Applications/Docker.app
-
       - name: Install node modules
         run: npm ci
 

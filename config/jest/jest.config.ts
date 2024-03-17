@@ -15,7 +15,10 @@ const config: Config = {
     '\\.(css|scss)$': 'identity-obj-proxy',
     '\\.(svg)$': 'svg-transform-loader'
   },
-  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts']
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+  globals: {
+    __IS_DEV__: true
+  }
 }
 
 export default config

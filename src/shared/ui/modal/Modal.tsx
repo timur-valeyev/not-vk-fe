@@ -2,6 +2,8 @@ import cn from 'classnames'
 import { FC, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import { Portal } from 'shared'
 
+import CloseIcon from '../../../shared/assets/icons/close-icon.svg'
+
 import styles from './Modal.module.scss'
 
 interface ModalProps {
@@ -55,6 +57,9 @@ export const Modal: FC<ModalProps> = ({ className, opened, closeModal, children 
       >
         <div className={cn(styles.overlay, className)} onClick={closeHandler}>
           <div className={cn(styles.content, className)} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.closeBtn} onClick={closeHandler}>
+              <CloseIcon />
+            </div>
             {children}
           </div>
         </div>
